@@ -1,0 +1,50 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class Bilancia {
+
+	private double peso;
+	
+	public Bilancia() {
+		azzeraLancetta();
+		//Assert inserita nel costruttore. Invariante di Classe. Azzera la lancetta ad ogni pesatura.
+		//creazione dell'oggetto.
+		assert lancettaAzzerata();
+		
+		privte void setPeso(double grammi) {
+			//precondizione.
+			assert grammi > 0;
+			
+			peso = grammi;
+		}
+		
+		private double getPeso(){
+			return peso;
+		}
+		
+		public void pesa(double grammi) {
+			if(grammi <= 0) {
+				throw new RuntimeException("Grammi <= 0! ");
+			}
+		
+		setPeso(grammi);
+		mostraPeso();
+		
+		azzeraLancetta();
+		
+		//invariante di classe
+		assert lancettaAzzerata();
+		}
+		
+		private void mostraPeso() {
+			System.out.println("Il peso e' di " + peso + " grammi ");
+		}
+		
+		private void azzeraLancetta() {
+			setPeso(0);
+		}
+		
+		private boolean lancettaAzzerata() {
+			return peso == 0;
+		}
+	}
+}

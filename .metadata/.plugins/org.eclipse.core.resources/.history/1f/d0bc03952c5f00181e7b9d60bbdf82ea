@@ -1,0 +1,12 @@
+/*Dato array list di poligoni (Quadrato o rettangolo). 
+ * Calcolare il quadrato che ha l'area piu' grande e la media di tutte le aree.*/
+
+
+
+public class ArrayListPoligoni {
+
+	public static void main(String[] args) {
+
+	}
+
+}

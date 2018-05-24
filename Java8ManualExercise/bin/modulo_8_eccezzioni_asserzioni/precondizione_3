@@ -1,0 +1,20 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class InstancesFactory2 {
+
+	//Siccome il metodo e' pubblico si consiglia di usare l'eccezione e non l'asserzione.
+	public Object getInstance(int index) throws Exception {
+		
+		if(!(index == 1 || index == 2)) {
+			throw new Exception("Indice errato: " + index);
+		}
+		
+		switch (index) {
+			
+			case 1:
+				return new Instance1();
+			case 2:
+				return new Instance2();
+		}
+	}
+}

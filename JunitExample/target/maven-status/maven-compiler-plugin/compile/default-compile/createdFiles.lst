@@ -1,0 +1,12 @@
+ufficio\it\begear\util\CreateConnection.class
+ufficio\it\begear\view\MenuDipartimento.class
+ufficio\it\begear\dao\DaoDipartimento.class
+ufficio\it\begear\model\Impiegato.class
+ufficio\it\begear\util\Utility.class
+ufficio\it\begear\controller\Main.class
+ufficio\it\begear\crud\CrudDipartimento.class
+ufficio\it\begear\test\JunitTestCase.class
+ufficio\it\begear\crud\CrudImpiegato.class
+ufficio\it\begear\dao\DaoImpiegato.class
+ufficio\it\begear\model\Dipartimento.class
+ufficio\it\begear\view\MenuImpiegato.class

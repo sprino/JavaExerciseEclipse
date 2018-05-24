@@ -1,0 +1,13 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class Bilancia {
+
+	public void metodo() {
+		if(flag == true) {
+			return;
+		}
+		
+		//L'esecuzione voglio che non arrivi qui, quindi si inserisce un assert nel flusso.
+		assert false;
+	}
+}

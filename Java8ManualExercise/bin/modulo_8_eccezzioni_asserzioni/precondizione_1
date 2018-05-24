@@ -1,0 +1,16 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class Data {
+
+	private int giorno;
+	
+	...
+	
+	public void setGiorno(int g) {
+	
+		//non va bene perchè g viene inserito dall'utente e se inserisce un valore errato
+		//verra restituito un AssertError...
+		assert (g > 0 && g<= 31): "Giorno non valido";
+		
+		giorno = g;
+}

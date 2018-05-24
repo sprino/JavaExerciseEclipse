@@ -1,0 +1,22 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class InvariantiInterne {
+
+	switch(tipoAuto){
+		
+		case Auto.SPORTIVA:
+			...
+			break;
+		
+		case Auto.LUSSO:
+			...
+			break;
+		
+		case Auto.UTILITARIA:
+			...
+			break;
+		
+		default:
+			//Asserzione invariante.
+			assert false : "Tipo di autoi non previsto : " + tipoAuto;
+}

@@ -1,0 +1,21 @@
+/*La classe contenuta nella directory PoligoniAbstract, rende tale cartella un package.*/
+package lezioni_bgear.poligoni.poligoni_astratti;
+
+/*Definisco classe pubblica di nome QuadratoExt estensione della poligoni.*/
+public class QuadratoExt extends PoligoniAbstract 
+{
+	public QuadratoExt(double lato1)
+	{
+		super(lato1);
+	}
+
+	public double getPerimetro()
+	{
+		return (this.getLato1() * 4);
+	}
+	
+	public double getArea()
+	{
+		return (this.getLato1() * this.getLato1());
+	}
+}

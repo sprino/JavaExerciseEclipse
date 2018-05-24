@@ -1,0 +1,16 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class InvariantiInterne {
+
+	if(i == 0){
+		...	
+	} else if (i == 1) {
+	...
+	} else {
+	
+		//Asserzione invariante.
+		assert i == 2 : "Attenzione i = " + i + "!";
+		...
+	}
+
+}

@@ -1,0 +1,63 @@
+package jse2_it_begear.main;
+
+import jse2_it_begear.model.*;
+import jse2_it_begear.util.*;
+
+//Creo classe
+public class JavaSe1 {
+
+	//Metodo main
+	public static void main(String[] args) throws CloneNotSupportedException {
+		
+		//Creo oggetto di tipo libro
+		Libro libro = new Libro("Il mastino dei baskervill", "Artur Conan Doile", "Inglese", "A_23434523");	
+		libro.setFormato("kindle");
+		libro.setAnnoUscita(1935);
+		libro.setEdizione("Limitata");
+		libro.setNumeroPagine(225);
+		libro.setGenere("Horror");
+		
+//		//Creo oggetto di tipo libro
+//		libro = new Libro("Il mastino dei baskervill", "Artur Conan Doile", "Inglese", "B_4521545646");	
+//		libro.setFormato("kindle");
+//		libro.setAnnoUscita(1935);
+//		libro.setEdizione("Limitata");
+//		libro.setNumeroPagine(225);
+//		libro.setGenere("Horror");
+//		
+//		//Creo oggetto di tipo libro
+//		libro = new Libro("Il mastino dei baskervill", "Artur Conan Doile", "Inglese", "C_3334456T");	
+//		libro.setFormato("kindle");
+//		libro.setAnnoUscita(1935);
+//		libro.setEdizione("Limitata");
+//		libro.setNumeroPagine(225);
+//		libro.setGenere("Horror");
+		
+		
+		//Creo oggetto di tipo brano
+		Brano brano = new Brano("November Rain", "Guns 'n Roses","230420180001BRN1");
+		brano.setAnnoUscita(1998);
+		brano.setFormato("Vinile");
+		brano.setGenere("Rock");
+		brano.setDurata(4);
+		brano.setCasaDiscografica("Los Angeles");
+		brano.setCantante("Axl Rose");
+		brano.setAlbum("Use your illusion");	
+		
+//		Stampa.titoloMedia(libro);
+//		for(Object temp : libro.getLibreria()) {
+//			if(temp != null) {
+//				Stampa.normalizzaStampaMedia((Libro) temp);
+//				System.out.println("\n");
+//			}
+//			else {
+//				System.out.println("Posizione vuota");
+//			}
+//		}
+	
+		Stampa.titoloMedia(brano);
+		Stampa.normalizzaStampaMedia(brano);
+		
+	}
+
+}

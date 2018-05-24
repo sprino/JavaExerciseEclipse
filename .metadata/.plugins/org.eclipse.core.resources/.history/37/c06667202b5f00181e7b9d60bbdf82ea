@@ -1,0 +1,7 @@
+package lezioni_bgear.social_network_over_compare_to.social_network_multi_ereditary;
+
+public interface FriendShip {
+	
+	//Dichiaro il metodo dell'interfaccia.
+	public int compareTo(Object x);
+}

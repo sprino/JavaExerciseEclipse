@@ -1,0 +1,19 @@
+1)vero, le classi astratte si devono estendere, se sono final non è possibile farlo.---ok
+
+2)vero---ok
+
+3)vero, non si possono implementare se sono final.---ok
+
+4)vero---ko (una classe astratta può non contenere metodi astratti, ma se ne contiene solo uno allora deve essere astratta).
+
+5)vero
+
+6)vero
+
+7)vero
+
+8)falso
+
+9)vero
+
+10)vero

@@ -1,0 +1,5 @@
+package manuale_di_java_8_se_cdsc.modulo_6_ereditarieta;
+
+public interface Musicale {
+
+}

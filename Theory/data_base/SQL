@@ -1,0 +1,53 @@
+Structured Query Language
+
+    • DDL (data definition language)
+        ◦ create
+        ◦ drop per cancellare
+        ◦ alter per modificare
+        
+    • DML (data manipulation language)
+        ◦ Insert
+        ◦ delate
+        ◦ create
+        ◦ update
+        
+    • SELECT attribbuto FROM tabella WHERE(dove) nome=il_nome
+        ◦ Attribbuto può essere * → tutti gli attribbuti.
+        ◦  * → .
+        
+COMANDI DML:
+
+COMMIT:toll grafici hanno l'autocommit ad on. Conferma della base dati che i dati sono inseriti.
+ROLLACK:Torna indietro nel tempo alla commit precedente.
+
+---insert into tabella1 (lista nomi colonne separata da virgola (opzionale)) values (lista dei valori in corrispondenza con lista nomi)
+
+---update tabella1 set colonna=valore where (condizione(individua la riga))
+errore comune è sbagliare la where.
+
+---delete from tabella1 where(condizione) 
+
+---select * from tabella1
+
+---select colonna1,colonna2 from tabella1
+
+---select distinct colonna1 from tabella1
+stampa tutti i valori distinti della colonna1.
+
+---select count(distinct colonna1) from tabella1
+stampa il numero dei valori diversi presenti nella colonna1 della tabella1
+
+---select * from tabella1 where nomecolonna='datiInQuellaPosizione'
+seleziona tutte le colonne della tabella1(*) dove(where) l'elemento di quella colonna è uguale a quel determinato valore,
+se è un varchar si mette tra virgolette altrimenti se è un intero si mette senza virgolette ad esempio.
+
+---select * from tabella1 where nomecolonna between 10 and 25
+...dove nomecolonna è compreso tra 10 e 25.
+
+---SELECT * FROM Customers WHERE NOT Country='Mexico' AND NOT Country='Germany';
+...dove la Country non è messico e non è germany
+
+---select * from Giocatore order by Numero asc
+...ordina numero in ordine ascendente.
+
+ 

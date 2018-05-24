@@ -1,0 +1,19 @@
+package jse1_it_begear.util;
+
+public final class Utility {
+
+//	public class SinglethonId{
+//		
+//		private static SinglethonId singletonId;
+//		
+//		private SinglethonId() {
+//			
+//		}
+//		
+//		public static SinglethonId getSinglethonId() {
+//			if(singletonId == null)
+//		}
+//		
+//	}
+	
+}

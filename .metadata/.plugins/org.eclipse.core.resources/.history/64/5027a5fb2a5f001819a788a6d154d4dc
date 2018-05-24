@@ -1,0 +1,98 @@
+package jse1_it_begear.main;
+
+//Importo i package
+import java.io.IOException;
+
+import jse1_it_begear.model.*;
+import jse1_it_begear.util.*;
+
+//Creo classe
+public class JavaSe1 {
+
+	//Metodo main
+	public static void main(String[] args) throws IOException {
+		
+		Libro libro[] = new Libro[3];
+		Brano brano[] = new Brano[3];
+		
+		//Creo oggetto di tipo libro
+		libro[0] = new Libro("Il mastino dei baskervill", "Artur Conan Doile", "Inglese", "A_23434523");	
+		libro[0].setFormato("kindle");
+		libro[0].setAnnoUscita(1935);
+		libro[0].setEdizione("Limitata");
+		libro[0].setNumeroPagine(225);
+		libro[0].setGenere("Horror");
+		
+		//Creo oggetto di tipo libro
+		libro[1] = new Libro("Il mastino dei baskervill", "Artur Conan Doile", "Inglese", "B_4521545646");	
+		libro[1].setFormato("kindle");
+		libro[1].setAnnoUscita(1935);
+		libro[1].setEdizione("Limitata");
+		libro[1].setNumeroPagine(225);
+		libro[1].setGenere("Horror");
+		
+		//Creo oggetto di tipo libro
+		libro[2] = new Libro("Il mastino dei baskervill", "Artur Conan Doile", "Inglese", "C_3334456T");	
+		libro[2].setFormato("kindle");
+		libro[2].setAnnoUscita(1935);
+		libro[2].setEdizione("Limitata");
+		libro[2].setNumeroPagine(225);
+		libro[2].setGenere("Horror");
+		
+		libro[0].setLibreria(libro);
+		
+		//Creo oggetto di tipo brano
+		brano[0] = new Brano("November Rain", "Guns 'n Roses","AAA_230420180001BRN1");
+		brano[0].setAnnoUscita(1998);
+		brano[0].setFormato("Vinile");
+		brano[0].setGenere("Rock");
+		brano[0].setDurata(4);
+		brano[0].setCasaDiscografica("Los Angeles");
+		brano[0].setCantante("Axl Rose");
+		brano[0].setAlbum("Use your illusion");
+		
+		//Creo oggetto di tipo brano
+		brano[1] = new Brano("November Rain", "Guns 'n Roses","BBB_230420180001BRN1");
+		brano[1].setAnnoUscita(1998);
+		brano[1].setFormato("Vinile");
+		brano[1].setGenere("Rock");
+		brano[1].setDurata(4);
+		brano[1].setCasaDiscografica("Los Angeles");
+		brano[1].setCantante("Axl Rose");
+		brano[1].setAlbum("Use your illusion");
+		
+		//Creo oggetto di tipo brano
+		brano[2] = new Brano("November Rain", "Guns 'n Roses","CCC_230420180001BRN1");
+		brano[2].setAnnoUscita(1998);
+		brano[2].setFormato("Vinile");
+		brano[2].setGenere("Rock");
+		brano[2].setDurata(4);
+		brano[2].setCasaDiscografica("Los Angeles");
+		brano[2].setCantante("Axl Rose");
+		brano[2].setAlbum("Use your illusion");
+		
+		Stampa.titoloMedia(libro[0]);
+		for(Libro temp : libro[0].getLibreria()) {
+			if(temp != null) {
+				Stampa.normalizzaStampaLibro(temp);
+				System.out.println("\n");
+			}
+			else {
+				System.out.println("Posizione vuota");
+			}
+		}
+	
+		Stampa.titoloMedia(brano[0]);
+		for(Brano temp : brano[0].getBrani()) {
+			if(temp != null) {
+				Stampa.normalizzaStampaBrano(temp);
+				System.out.println("\n");
+			}
+			else {
+				System.out.println("Posizione vuota");
+			}
+		}
+		
+	}
+
+}

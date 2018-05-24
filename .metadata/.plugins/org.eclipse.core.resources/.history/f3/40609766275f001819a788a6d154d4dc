@@ -1,0 +1,19 @@
+1)falso, stesso nome e diversa lista di parametri.
+
+2)falso, stesso nome e diversa lista di parametri.
+
+3)vero
+
+4)vero
+
+5)falso, l'overload non centra con l'ereditarietà. consiste nel 
+		 dichiarare un metodo con medesimo nome e differente lista di parametri, numero, tipo e posizione.
+6)falso
+
+7)vero
+
+8)vero, il tipo di ritorno non può essere differente.
+
+9)vero
+
+10)falso, cambia la posizione!

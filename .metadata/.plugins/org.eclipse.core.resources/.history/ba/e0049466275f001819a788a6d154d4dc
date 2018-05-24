@@ -1,0 +1,20 @@
+1)falso---ok
+
+2)vero, le classi final non possono essere estese.---ok
+
+3)falso.---ok
+
+4)vero---ok
+
+5)falso---ok
+
+6)falso, l'interfaccia funzionale dichiara un unico metodo astratto.---ok
+
+7)vero---ok
+
+8)falso, un giocatore non è una squadra, tantomeno viceversa.---ok
+
+9)vero, posso specializzare una persona che può essere un giocatore ed un elemento della squadra, 
+	ma tra squadra e giocatore non c'è specializzazione.---ok
+	
+10)falso, un figlio è un padre ed un padre è un figlio.---ok

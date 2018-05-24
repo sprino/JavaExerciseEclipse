@@ -1,0 +1,8 @@
+package lezioni_bgear.social_network_over_compare_to;
+
+public interface FriendShip {
+
+	// Dichiaro il metodo dell'interfaccia.
+	public boolean isNearTo(Object x);
+
+}

@@ -1,0 +1,66 @@
+package jse2_it_begear.model;
+
+public abstract class Media {
+	
+	private String titolo;
+	private String genere;
+	private String autore;
+	private String formato;
+	private int annoUscita;
+	private int posizione;
+	
+	public int getPosizione() {
+		return posizione;
+	}
+
+	public void setPosizione(int posizione) {
+		this.posizione = posizione;
+	}
+	
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
+
+	public void setGenere(String genere) {
+		this.genere = genere;
+	}
+
+	public void setAutore(String autore) {
+		this.autore = autore;
+	}
+	
+	public void setFormato(String formato) {
+		this.formato = formato;
+	}
+	
+	public void setAnnoUscita(int annoUscita) {
+		this.annoUscita = annoUscita;
+	}
+	
+	public String getTitolo() {
+		return this.titolo;
+	}
+
+	public String getGenere() {
+		return this.genere;
+	}
+
+	public String getAutore() {
+		return this.autore;
+	}
+
+	public String getFormato() {
+		return this.formato;
+	}
+
+	public int getAnnoUscita() {
+		return this.annoUscita;
+	}
+	
+	//Obbligo ad implementare il metodo alle classi che estendono questa classe.
+	//Il nome deve essere toString per far in modo che altri metodi riconoscano 
+	// questo metodo quando applico il polimorfismo per dati (vedi metodo stampaMedia nella classe utility).
+	@Override
+	public abstract String toString();
+
+}

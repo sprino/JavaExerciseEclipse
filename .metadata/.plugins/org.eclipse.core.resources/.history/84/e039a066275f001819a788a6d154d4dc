@@ -1,0 +1,27 @@
+package modulo_8_eccezzioni_asserzioni;
+
+public class InstancesFactory2 {
+
+	//Applico assert a postcondizione.
+	private boolean isOpen = false;
+	
+	public void open() {
+		
+		//...
+		isOpen = true;
+		//...
+		
+			//postcondizione, appena prima che termini un metodo.
+			assert isOpen;
+	}
+	
+	public void close() throws ConnectionException {
+		if(!isOpen){
+			throws new ConnectionException("Impossibile chiudere connessioni non aperte");
+			}
+			
+		//...
+		isOpen = false;
+		//...
+	} 	
+}

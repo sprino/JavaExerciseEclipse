@@ -1,0 +1,140 @@
+package it.begear.onetomany;
+
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+/**
+ * Crud.java A Hibernate hello world program
+ * 
+ */
+public class Crud {
+	protected static SessionFactory sessionFactory;
+
+	protected void setup() {
+		
+		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();																				// hibernate.cfg.xml
+				
+		try {
+			sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+		} catch (Exception ex) {
+			StandardServiceRegistryBuilder.destroy(registry);
+		}
+	}
+
+	protected void exit() {
+		sessionFactory.close();
+	}
+
+	
+	protected void create() {
+	
+		Documento documento = new Documento();
+		
+		documento.setFormato("PDF");
+		documento.setTipo("Personale");
+		
+		Documento documento2 = new Documento();
+		
+		documento2.setFormato("DOC");
+		documento2.setTipo("Aziendale");
+		
+		Set<Documento> lista = new HashSet<>();
+		
+		lista.add(documento);
+		lista.add(documento2);
+		
+		Utente utente = new Utente();
+		
+		utente.setNome("Vincenzo");
+		utente.setCognome("Selvaggio");
+		utente.setDocumenti(lista);
+		
+		Session session = sessionFactory.openSession();
+
+		session.beginTransaction();
+
+		session.save(documento);
+		session.save(documento2);
+		session.save(utente);
+
+		session.getTransaction().commit();
+
+		session.close();
+	}
+
+	protected void read() {
+		Session session = sessionFactory.openSession();
+
+		int id = 1;
+
+		Utente utente = session.get(Utente.class, id);
+
+		System.out.println("Nome: " + utente.getNome());
+		
+		System.out.println("Cognome: " + utente.getCognome());
+		
+
+		session.close();
+	}
+
+//	protected void update() {
+//		Gioco gioco = new Gioco();
+//
+//	
+//		gioco.setTitolo("Planescape Torment");
+//		
+//		gioco.setAutore("Bocciato");
+//		
+//		gioco.setPrezzo(5000);
+//		
+//		gioco.setId(20);
+//		
+//		Session session = sessionFactory.openSession();
+//
+//		session.beginTransaction();
+//
+//		session.update(gioco);
+//
+//		session.getTransaction().commit();
+//
+//		session.close();
+//	}
+//
+//	protected void delete() {
+//		Gioco gioco = new Gioco();
+//	
+//		gioco.setId(3);
+//
+//		Session session = sessionFactory.openSession();
+//
+//		session.beginTransaction();
+//
+//		session.delete(gioco);
+//
+//		session.getTransaction().commit();
+//
+//		session.close();
+//	}
+
+	public static void main(String[] args) {
+
+		Crud crud = new Crud();
+
+		// potete inserire qua la logica per lo scanner
+		
+		crud.setup();
+		crud.create();
+		//manager.update();
+		//crud.read();
+		//manager.delete();
+		crud.exit();
+	}
+
+}

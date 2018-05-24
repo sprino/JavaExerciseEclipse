@@ -1,0 +1,19 @@
+1) vero
+
+2) vero
+
+3) vero; eseguendo istruzioni: j=++i >>> j=6, i=6 // k=j++ >>> k=6, j=7 // h=k-- >>> h=6, k=5 quindi i=6, j=7, h=6, k=5.
+
+4) vero
+
+5) falso
+
+6) falso
+
+7) vero
+
+8) falso
+
+9) falso
+
+10) falso
