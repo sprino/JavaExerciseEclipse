@@ -14,18 +14,6 @@ import javax.persistence.Table;
 @Table(name="Utente")
 public class Utente {
 
-	@Id
-	@Column(name="id_utente")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_utente;
-	private String nome;
-	private String cognome;
-	
-	//Se dichiarata prima di (private int id_utente) causa il seguante errore: 
-	//Exception in thread "main" java.lang.NullPointerException
-	@OneToMany(fetch=FetchType.EAGER, mappedBy="utente")
-	private Set<Documento> documenti;
-
 	public Set<Documento> getDocumenti() {
 		return documenti;
 	}
@@ -50,4 +38,16 @@ public class Utente {
 	public void setCognome(String congome) {
 		this.cognome = congome;
 	}
+	
+	@Id
+	@Column(name="id_utente")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id_utente;
+	private String nome;
+	private String cognome;
+	
+	//Se dichiarata prima di (private int id_utente) causa il seguante errore: 
+	//Exception in thread "main" java.lang.NullPointerException
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="utente")
+	private Set<Documento> documenti;
 }

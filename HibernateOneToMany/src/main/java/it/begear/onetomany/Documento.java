@@ -5,18 +5,10 @@ import javax.persistence.*;
 @Entity
 @Table(name="documento")
 public class Documento {
-
-	@Id
-	@Column(name="id_documento")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_documento;
+	
 	private String tipo;
 	private String formato;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id_utente")
-	private Utente utente;
-
 	public Utente getUtente() {
 		return utente;
 	}
@@ -42,4 +34,13 @@ public class Documento {
 		this.formato = formato;
 	}
 	
+	@Id
+	@Column(name="id_documento")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id_documento;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_utente")
+	private Utente utente;
+
 }

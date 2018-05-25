@@ -98,7 +98,7 @@ public class Crud {
 //		gioco.setAutore("Bocciato");
 //		gioco.setPrezzo(5000);
 //		
-////		gioco.setId(10);
+//		gioco.setId(10);
 //		
 //		Session session = sessionFactory.openSession();
 //		session.beginTransaction();
