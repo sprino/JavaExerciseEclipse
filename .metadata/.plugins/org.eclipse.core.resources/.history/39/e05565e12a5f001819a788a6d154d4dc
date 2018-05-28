@@ -1,9 +1,0 @@
-package lezioni_bgear.poligoni.poligoni_interfaccia;
-
-//Creo classe PoligoniImplement di tipo interfaccia, che contiene due metodi.
-public interface PoligoniImplement 
-{
-	//Implicitamente abstract
-	public double getPerimetro();
-	public double getArea();
-}
