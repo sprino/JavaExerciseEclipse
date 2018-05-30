@@ -1,0 +1,12 @@
+2018-05-30 19:29:48 INFO  Utility:30 - Inizio test inserimento utente:
+2018-05-30 19:29:49 INFO  Utility:54 - com.mysql.cj.jdbc.PreparedStatement@6e06451e: INSERT INTO Impiegato (Nome, Cognome, Dipartimento, Ufficio, Stipendio) VALUES ('Alfa','Beta','Amministrazione',34,22)
+2018-05-30 19:29:49 INFO  Utility:323 - com.mysql.cj.jdbc.PreparedStatement@3159c4b8: SELECT * FROM Impiegato
+2018-05-30 19:29:49 INFO  Utility:160 - com.mysql.cj.jdbc.PreparedStatement@6adede5: SELECT * FROM Impiegato WHERE Nome='Alfa' AND Cognome='Beta' 
+2018-05-30 19:29:49 INFO  Utility:103 - com.mysql.cj.jdbc.PreparedStatement@192b07fd: SELECT * FROM Impiegato WHERE idImpiegato=64
+2018-05-30 19:29:49 INFO  Utility:282 - com.mysql.cj.jdbc.PreparedStatement@dc24521: DELETE FROM Impiegato WHERE idImpiegato=64
+2018-05-30 19:29:49 INFO  Utility:65 - Inizio test inserimento dipartimento:
+2018-05-30 19:29:49 INFO  Utility:45 - com.mysql.cj.jdbc.PreparedStatement@2038ae61: INSERT INTO Dipartimento (nome, indirizzo, citta ) VALUES ('ProvaDipartimento','via Alfa, 21','Roma')
+2018-05-30 19:29:49 INFO  Utility:288 - com.mysql.cj.jdbc.PreparedStatement@71318ec4: SELECT * FROM Dipartimento
+2018-05-30 19:29:49 INFO  Utility:86 - com.mysql.cj.jdbc.PreparedStatement@52a86356: SELECT * FROM Dipartimento WHERE nome='ProvaDipartimento'
+2018-05-30 19:29:49 INFO  Utility:145 - com.mysql.cj.jdbc.PreparedStatement@5383967b: SELECT * FROM Dipartimento WHERE nome='ProvaDipartimento'
+2018-05-30 19:29:49 INFO  Utility:246 - com.mysql.cj.jdbc.PreparedStatement@56235b8e: DELETE FROM Dipartimento WHERE nome='ProvaDipartimento'
