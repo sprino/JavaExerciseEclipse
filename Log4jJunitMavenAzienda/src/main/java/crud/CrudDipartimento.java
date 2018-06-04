@@ -33,7 +33,7 @@ public class CrudDipartimento implements DaoDipartimento{
 		
 		conn = CreateConnection.getCreateConnectionInstance().mysqlConnection();
 		
-		String sql = "INSERT INTO Dipartimento (nome, indirizzo, citta ) VALUES (?,?,?)";
+		String sql = "INSERT INTO Dipartimento (nome, indirizzo, citta) VALUES (?,?,?)";
 		PreparedStatement prepareStatement;
 		
 		try {

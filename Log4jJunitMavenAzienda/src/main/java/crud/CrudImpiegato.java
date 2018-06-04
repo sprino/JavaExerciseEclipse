@@ -180,7 +180,7 @@ public class CrudImpiegato implements DaoImpiegato{
 					state = false;
 				}
 				else {
-					System.out.println("Ho trovato n� " + count + " impiegati!");
+					System.out.println("Ho trovato n " + count + " impiegati!");
 					state = true;
 				}
 				

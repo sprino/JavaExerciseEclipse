@@ -14,7 +14,7 @@ public final class CreateConnection {
 //			+ "true&useLegacyDatetimeCode="
 //			+ "false&serverTimezone="
 //			+ "UTC";
-	private static String dbURL = "jdbc:mysql://localhost:3306/db_impiegati?serverTimezone=UTC";
+	private static String dbURL = "jdbc:mysql://localhost:3306/dbImpiegati?serverTimezone=UTC";
 	
 	//private static String dbURL = "jdbc:mysql://localhost:3306/sampledb";
 	private static String username = "root";
