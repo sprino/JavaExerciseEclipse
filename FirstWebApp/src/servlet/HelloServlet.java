@@ -24,12 +24,12 @@ public class HelloServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		response.setContentType("text/html");
-		PrintWriter writer = response.getWriter();	
-		Date date = new Date();
-		writer.println("<h2> Hi There! </h2> <br> <h3> Date = " + date +"</h3>");
+//		response.setContentType("text/html");
+//		PrintWriter writer = response.getWriter();	
+//		Date date = new Date();
+//		writer.println("<h2> Hi There! </h2> <br> <h3> Date = " + date +"</h3>");
 	}
 
 	/**

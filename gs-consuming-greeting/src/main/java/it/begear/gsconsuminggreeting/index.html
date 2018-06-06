@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script type="text/javascript">
+
+function Get(link){
+    var Httpreq = new XMLHttpRequest(); // a new request
+    Httpreq.open("GET",link,false);
+    Httpreq.send(null);
+    return Httpreq.responseText;
+ }
+
+var json_obj = JSON.parse(Get("http://localhost:8086/greetingmicro"));
+document.getElementById("demo1").innerHTML = "Primo: " + json_obj.id + ", " + json_obj.content;
+//console.log("this is the author name: "+ json_obj.id + json_obj.content); 
+
+//document.write(responseText);
+
+var obj = JSON.parse('{"id":56,"content":"Hello, World!"}');
+document.getElementById("demo2").innerHTML = "Secondo: " + obj.id + ", " + obj.content;
+
+$(document).ready(function () {
+
+    var url = 'http://localhost:8086/greetingmicro';
+
+    //Create a new link with the url as its href:
+    var a = $('<a>', { href: url});
+    var sResult = '<b>Terzo: </b> ' + '<b>Id:</b> ' + a.id('id') + '<br>' + '<b>Content: </b>' + a.content('content') + '<br>';
+    $('span').html(sResult);
+	});
+    
+</script>
+
+<a href="http://localhost:8086/greetingmicro">microservice</a>
+
+	<span></span>
+
+</header>
+
+</body>
+</html>
