@@ -38,23 +38,19 @@ public class PersonController {
 	
 	//For add and update person both
 	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
-	public String addPerson(@ModelAttribute("person") Person p){
-		
+	public String addPerson(@ModelAttribute("person") Person p){	
 		if(p.getId() == 0){
 			//new person, add it
 			this.personService.addPerson(p);
 		}else{
 			//existing person, call update
 			this.personService.updatePerson(p);
-		}
-		
-		return "redirect:/persons";
-		
+		}		
+		return "redirect:/persons";	
 	}
 	
 	@RequestMapping("/remove/{id}")
-    public String removePerson(@PathVariable("id") int id){
-		
+    public String removePerson(@PathVariable("id") int id){		
         this.personService.removePerson(id);
         return "redirect:/persons";
     }

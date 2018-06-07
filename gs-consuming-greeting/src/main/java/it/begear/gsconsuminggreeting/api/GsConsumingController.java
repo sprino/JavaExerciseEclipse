@@ -22,7 +22,7 @@ public class GsConsumingController {
 		
 		@GetMapping("/greetingmicro")
 		Object getGreetingByAnotherMicroservice() throws IOException {
-			Object forObject = restTemplate.getForObject("http://localhost:8080/greeting", Object.class);
+			Object forObject = restTemplate.getForObject("http://localhost:8085/greeting", Object.class);
 			System.out.println(forObject);
 			return forObject;
 		}
