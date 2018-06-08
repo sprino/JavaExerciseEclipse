@@ -1,4 +1,3 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,57 +7,51 @@
 </head>
 	
 <body>
-
-	<h1>Prova</h1>
+	<h1>PROVA</h1>
+		<c:out value="${attrib}"/>	
+		<div>${attrib}</div>
 		<div>
-			<button id="micro">PUSH</button>
+			<button id="micro1">PUSH</button>
+			<button id="micro2">DOM</button>
 		</div>
-
 	<div id="nuovo" ></div>
-
 		<script
 		  src="https://code.jquery.com/jquery-3.3.1.min.js"
 		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		  crossorigin="anonymous">
 		</script>
-		<script type="text/javascript">
-//		jQuery(document).ready(function($){
-//			$("#micro").click(function(event){
-//				$.ajax({
-//					url:"/gs/micro2"
-//				}).then(function(data) {
-//					$("#nuovo").append(data);
-//					console.log(data);
-//				});
-//			});
-//		});
 		
+		<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$("#micro1").click(function(event){
+				$.ajax({
+					url:"/gs/micro"
+				}).then(function(data) {
+					$("#nuovo").empty();
+					$("#nuovo").append(data);
+					console.log(data);
+				});
+			});
+		});
 		
 		$(document).ready(function($){
-			$('#micro').click(function(event){
+			$('#micro2').click(function(event){
 			$.ajax({ 
 			    type: 'GET', 
 			    url: '/gs/utenti', 
 			    data: { get_param: 'value' }, 
 			    dataType: 'json',
 			    success: function (data) { 
-			        $('<div>').remove();
+			        $("#nuovo").empty();
 			        $.each(data, function(index, element) {
-			            $('body').append($('<div>', {
+			            $("#nuovo").append($('<div>', {
 			                text: element.id + " " + element.name + " " + element.country
 			            }));
 			        });
-			    }
-			});
-			});
-			});
-		
-
-		
-		//A $( document ).ready() block.
-		//$( document ).ready(function() {
-		//    alert( "Bocciato!" );
-		//});
+			       }
+			    });
+		     });
+	      });
 		
 		</script>
 
