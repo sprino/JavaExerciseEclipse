@@ -7,7 +7,13 @@
 </head>
 	
 <body>
-	<h1>PROVA</h1>
+	
+	<c:out value="${attrib}"/>	
+	
+	<h1>PROVA 	<c:out value="${attrib}"/>	</h1>
+	
+		<c:out value="${attrib}"></c:out>
+							
 		<c:out value="${attrib}"/>	
 		<div>${attrib}</div>
 		<div>
@@ -54,6 +60,8 @@
 	      });
 		
 		</script>
+
+		<c:out value="${attrib}"/>	
 
 </body>
 
