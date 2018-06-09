@@ -8,14 +8,10 @@
 	
 <body>
 	
-	<c:out value="${attrib}"/>	
+	<h1>PROVA</h1><br />
 	
-	<h1>PROVA 	<c:out value="${attrib}"/>	</h1>
-	
-		<c:out value="${attrib}"></c:out>
-							
-		<c:out value="${attrib}"/>	
-		<div>${attrib}</div>
+		<c:out value="${attrib}"/>
+
 		<div>
 			<button id="micro1">PUSH</button>
 			<button id="micro2">DOM</button>
@@ -59,9 +55,7 @@
 		     });
 	      });
 		
-		</script>
-
-		<c:out value="${attrib}"/>	
+		</script>	
 
 </body>
 
