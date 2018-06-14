@@ -18,7 +18,6 @@
     
     <property name="hibernate.hbm2ddl.auto">create</property>
     
-    
     <mapping class="it.begear.onetomany.Utente" />
     <mapping class="it.begear.onetomany.Documento" />
     

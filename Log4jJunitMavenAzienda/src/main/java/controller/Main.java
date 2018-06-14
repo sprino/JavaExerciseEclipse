@@ -1,6 +1,5 @@
 package controller;
 
-
 import crud.CrudDipartimento;
 import crud.CrudImpiegato;
 import dao.DaoDipartimento;

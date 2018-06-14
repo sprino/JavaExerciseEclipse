@@ -44,10 +44,9 @@ public class Crud {
 		
 		lista.add(documento);
 
-//		documento.setFormato("Doc");
-//		documento.setTipo("Aziendale");
-//
-//		lista.add(documento);
+		//documento.setFormato("Doc");
+		//documento.setTipo("Aziendale");
+		//lista.add(documento);
 		
 		utente.setNome("Vincenzo");
 		utente.setCognome("Selvaggio");

@@ -42,7 +42,7 @@ public class CrudDipartimento implements DaoDipartimento{
 			prepareStatement.setString(2, user.getIndirizzo());
 			prepareStatement.setString(3, user.getCitta());
 
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			int rowsInserted = prepareStatement.executeUpdate();
 			
@@ -83,7 +83,7 @@ public class CrudDipartimento implements DaoDipartimento{
 			prepareStatement = conn.prepareStatement(sql);
 			prepareStatement.setString(1, dip.getNome());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			ResultSet result = prepareStatement.executeQuery();
 			 
@@ -142,7 +142,7 @@ public class CrudDipartimento implements DaoDipartimento{
 			prepareStatement = conn.prepareStatement(sql);
 			prepareStatement.setString(1, dip.getNome());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			//Se passo sql come parametro di executeQuery mi da errore, per passare sql devo non preparare lo satement.
 			ResultSet result = prepareStatement.executeQuery();
@@ -200,7 +200,7 @@ public class CrudDipartimento implements DaoDipartimento{
 			
 			prepareStatement.setString(4, dip.getNome());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			int rowsUpdated = prepareStatement.executeUpdate();
 			
@@ -243,7 +243,7 @@ public class CrudDipartimento implements DaoDipartimento{
 			prepareStatement = conn.prepareStatement(sql);
 			prepareStatement.setString(1, dip.getNome());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			int rowsDeleted = prepareStatement.executeUpdate();
 			
@@ -285,7 +285,7 @@ public class CrudDipartimento implements DaoDipartimento{
 		try {
 			prepareStatement = conn.prepareStatement(sql);
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			ResultSet result = prepareStatement.executeQuery();
 			

@@ -6,15 +6,17 @@ import java.sql.SQLException;
 
 public final class CreateConnection {
 
+	//Singleton
 	private static CreateConnection createConnectionInstance = null;
 
-// Per la versione 8 di mysql.
-//	private static String dbURL = "jdbc:mysql://localhost:3306/db_impiegati?useUnicode="
-//			+ "true&useJDBCCompliantTimezoneShift="
-//			+ "true&useLegacyDatetimeCode="
-//			+ "false&serverTimezone="
-//			+ "UTC";
-	private static String dbURL = "jdbc:mysql://localhost:3306/dbImpiegati?serverTimezone=UTC";
+	// Per la versione 8 di mysql.
+	//	private static String dbURL = "jdbc:mysql://localhost:3306/db_impiegati?useUnicode="
+	//			+ "true&useJDBCCompliantTimezoneShift="
+	//			+ "true&useLegacyDatetimeCode="
+	//			+ "false&serverTimezone="
+	//			+ "UTC";
+	
+	private static String dbURL = "jdbc:mysql://localhost:3306/db_impiegati?serverTimezone=UTC";
 	
 	//private static String dbURL = "jdbc:mysql://localhost:3306/sampledb";
 	private static String username = "root";

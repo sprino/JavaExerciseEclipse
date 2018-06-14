@@ -27,8 +27,7 @@ public class JunitTestCase {
 		DaoImpiegato daoImp = new CrudImpiegato();
 		Impiegato imp = new Impiegato();
 		
-		Utility.getMioLogger().info("Inizio test inserimento utente:");
-		
+		Utility.getMioLogger("Inizio test inserimento utente:");
 		//Nome
 		imp.setNome("Alfa");
 		
@@ -62,7 +61,7 @@ public class JunitTestCase {
 		DaoDipartimento daoDip = new CrudDipartimento();
 		Dipartimento dip = new Dipartimento();
 		
-		Utility.getMioLogger().info("Inizio test inserimento dipartimento:");
+		Utility.getMioLogger("Inizio test inserimento dipartimento:");
 		//Nome
 		dip.setNome("ProvaDipartimento");
 		

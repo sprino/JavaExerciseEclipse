@@ -51,7 +51,7 @@ public class CrudImpiegato implements DaoImpiegato{
 			prepareStatement.setInt(4, imp.getUfficio());
 			prepareStatement.setInt(5, imp.getStipendio());
 
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			int rowsInserted = prepareStatement.executeUpdate();
 			ResultSet id = prepareStatement.getGeneratedKeys();
@@ -100,7 +100,7 @@ public class CrudImpiegato implements DaoImpiegato{
 			prepareStatement = conn.prepareStatement(sql);
 			prepareStatement.setInt(1, imp.getIdImpiegato());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			//Se passo sql come parametro di executeQuery mi da errore, per passare sql devo non preparare lo satement.
 			ResultSet result = prepareStatement.executeQuery();
@@ -157,7 +157,7 @@ public class CrudImpiegato implements DaoImpiegato{
 			prepareStatement.setString(1, imp.getNome());
 			prepareStatement.setString(2, imp.getCognome());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			//Se passo sql come parametro di executeQuery mi da errore, per passare sql devo non preparare lo satement.
 			ResultSet result = prepareStatement.executeQuery();
@@ -232,9 +232,9 @@ public class CrudImpiegato implements DaoImpiegato{
 			
 			prepareStatement.setInt(6, imp.getIdImpiegato());
 
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			int rowsUpdated = prepareStatement.executeUpdate();
 			
@@ -279,7 +279,7 @@ public class CrudImpiegato implements DaoImpiegato{
 			prepareStatement = conn.prepareStatement(sql);
 			prepareStatement.setInt(1, imp.getIdImpiegato());
 
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			int rowsDeleted = prepareStatement.executeUpdate();
 			
@@ -320,7 +320,7 @@ public class CrudImpiegato implements DaoImpiegato{
 		try {
 			prepareStatement = conn.prepareStatement(sql);
 			
-			Utility.getMioLogger().info(prepareStatement.toString());
+			Utility.getMioLogger(prepareStatement.toString());
 			
 			ResultSet result = prepareStatement.executeQuery();
 			

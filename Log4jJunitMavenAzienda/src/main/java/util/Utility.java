@@ -25,8 +25,7 @@ public final class Utility {
 	}
 	
 	//Logger method
-	public static Logger getMioLogger() {
-		return mioLogger;
+	public static void getMioLogger(String message) {
+		 mioLogger.info(message);
 	}
-
 }
