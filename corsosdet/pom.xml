@@ -1,0 +1,160 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.oneleo.test</groupId>
+	<artifactId>corsosdet</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<confluence-reporting-maven-plugin.project.version>4.8</confluence-reporting-maven-plugin.project.version>
+		<confluence.home>https://confluence.au-sdc.com:8443</confluence.home>
+		<confluence.endPoint>${confluence.home}/rpc/xmlrpc</confluence.endPoint>
+		<confluence.spaceKey>FPKB</confluence.spaceKey>
+		<confluence.serverId>confluence</confluence.serverId>
+		<confluence.templateWiki>${basedir}/defaultTemplate.confluence</confluence.templateWiki>
+
+		<!-- CUSTOM CONFIGURATION -->
+		<confluence.title>OneLeo Test Accelerators</confluence.title>
+		<confluence.parentPageTitle>Test Automation</confluence.parentPageTitle>
+		<!-- CUSTOM CONFIGURATION -->
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.bsc.maven</groupId>
+				<artifactId>confluence-reporting-maven-plugin</artifactId>
+				<version>${confluence-reporting-maven-plugin.project.version}</version>
+				<configuration>
+					<endPoint>${confluence.endPoint}</endPoint>
+					<spaceKey>${confluence.spaceKey}</spaceKey>
+					<parentPageTitle>${confluence.parentPageTitle}</parentPageTitle>
+					<title>${confluence.title}</title>
+					<templateWiki>${confluence.templateWiki}</templateWiki>
+					<wikiFilesExt>.confluence</wikiFilesExt>
+					<serverId>${confluence.serverId}</serverId>
+					<labels>
+						<label>FactoryTeam</label>
+					</labels>
+				</configuration>
+			</plugin>
+<!-- 			<plugin>
+				<groupId>com.oneleo.test</groupId>
+				<artifactId>cucumber-support-plugin</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>process</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>process</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin> -->
+			
+			<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+			<plugin>
+				<groupId>org.bsc.maven</groupId>
+				<artifactId>confluence-reporting-maven-plugin</artifactId>
+				<version>4.4.2</version>
+				<configuration>
+					<labels>
+						<label>FactoryTeam</label>
+					</labels>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+	</build>
+	
+	<dependencies>
+	
+	
+	
+	    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.3</version>
+    	</dependency>
+
+    	<dependency>
+        	<groupId>org.apache.httpcomponents</groupId>
+        	<artifactId>httpcore</artifactId>
+        	<version>4.4.6</version>
+    	</dependency> 
+   
+	    <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>1.2.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>1.2.0</version>
+    </dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-junit</artifactId>
+		    <version>1.2.4</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-core</artifactId>
+		    <version>1.2.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.191</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cassandraunit</groupId>
+			<artifactId>cassandra-unit</artifactId>
+			<version>3.1.3.2</version>
+		<exclusions>
+			<exclusion>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+			</exclusion>
+		</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.awaitility</groupId>
+			<artifactId>awaitility</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>2.47.2</version>
+		</dependency>
+
+<!-- 		<dependency>
+			<groupId>com.datastax.cassandra</groupId>
+			<artifactId>cassandra-driver-core</artifactId>
+			<version>3.3.0</version>
+		</dependency> -->
+
+		<!-- Dependencies for SAG Universal Messaging -->
+		
+		<!-- Dependency for Active MQ -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.14.3</version>
+		</dependency>
+	</dependencies>
+</project>
